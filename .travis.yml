@@ -12,9 +12,13 @@ branches:
     - dev
 install:
   - npm install -g git+https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - R -e "install.packages('mrgsolve');"
+  - R -e "install.packages('lattice');"
 script:
   - qs3p build
 after_success:
+  - echo "run R code here"
+before_deploy:
   - echo "Sending the files to dist branch..."
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
