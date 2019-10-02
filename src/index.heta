@@ -1,0 +1,23 @@
+/*
+  Minimal heta file
+*/
+namespace one begin
+  comp1 @Compartment .= 1;
+  A @Species { compartment: comp1 };
+  B @Species { compartment: comp1 };
+  r1 @Reaction { actors: A => 2B };
+
+  // math
+  A .= 10;
+  B .= 0; //ddds
+  r1 := k1*A*comp1;
+end
+
+k1 @Const = 1e-3;
+
+mrg @MrgsolveExport { model: one };
+sbml @SBMLExport { model: one };
+slv @SLVExport { model: one};
+simbio @SimbioExport { model: one};
+json @JSONExport;
+yaml @YAMLExport;

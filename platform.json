@@ -1,0 +1,11 @@
+{
+  "id": "mini",
+  "builderVersion": "^0.3",
+  "options": {
+    "logLevel": "info"
+  },
+  "importModule": {
+    "type": "heta",
+    "filename": "src/index.heta"
+  }
+}
