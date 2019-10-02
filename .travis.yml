@@ -8,8 +8,9 @@ branches:
   only:
     - master
     - dev
+before_script:
+  - npm install git+https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
 script:
-  - npm install -g qs3p-js
   - qs3p build
 after_success:
   - echo "Sending the files to dist branch..."
