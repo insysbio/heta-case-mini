@@ -1,0 +1,44 @@
+- class: Compartment
+  id: comp1
+  space: one
+  assignments:
+    start_: {expr: '1'}
+- class: Species
+  id: A
+  space: one
+  assignments:
+    start_: {expr: '10'}
+  compartment: comp1
+- class: Species
+  id: B
+  space: one
+  assignments:
+    start_: {expr: '0'}
+  compartment: comp1
+- class: Reaction
+  id: r1
+  space: one
+  assignments:
+    ode_: {expr: k1 * A * comp1}
+  actors:
+    - {target: A, stoichiometry: -1}
+    - {target: B, stoichiometry: 2}
+- class: Const
+  id: k1
+  num: 0.001
+- class: MrgsolveExport
+  id: mrg
+  model: one
+- class: SBMLExport
+  id: sbml
+  model: one
+- class: SLVExport
+  id: slv
+  model: one
+- class: SimbioExport
+  id: simbio
+  model: one
+- class: JSONExport
+  id: json
+- class: YAMLExport
+  id: yaml
