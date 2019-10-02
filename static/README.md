@@ -5,7 +5,7 @@ This is the example for platform based on Heta and qs3p-js. These files and figu
 ## Results of building
 - [DBSolve](./slv.slv)
 - [SBML V2L4](./sbml.xml)
-- [Simbiology/Matlab](./simbio.xml)
+- [Simbiology/Matlab](./simbio.m)
 - [Mrgsolve](./mrg.cpp)
 - [JSON](./json.json)
 - [YAML](./yaml.yml)
