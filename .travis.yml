@@ -1,17 +1,24 @@
 language: node_js
 node_js:
 - '10'
+os:
+  - linux
+  - osx
+branches:
+  only:
+    - master
+    - dev
 script:
-- npm install -g qs3p-js
-- qs3p build
-- cp static/index.md dist/index.md
-deploy:
-- echo "Sending the files to gh-pages..."
-- git config --global user.email "travis@travis-ci.org"
-- git config --global user.name "Travis CI"
-- git clone -b dist --single-branch https://github.com/insysbio/heta-case-mini tmp
-- cd tmp
-- cp -rf ../dist/* online
-- git add --all
-- git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
-- git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:dist
+  - npm install -g qs3p-js
+  - qs3p build
+after_success:
+  - echo "Sending the files to dist branch..."
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis CI"
+  - git clone -b dist --single-branch https://github.com/insysbio/heta-case-mini tmp
+  - cd tmp
+  - cp -rf ../dist/* ./
+  - cp -rf ../static/* ./
+  - git add --all
+  - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
+  - git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:dist
