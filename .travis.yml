@@ -24,4 +24,4 @@ after_success:
   - cp -rf ../static/* ./
   - git add --all
   - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:dist
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:dist; fi
