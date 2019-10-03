@@ -1,7 +1,7 @@
 language: r
-#r_packages:
+r_packages:
+  - lattice
 #  - mrgsolve
-#  - lattice
 node_js: 
   - '10'
 cache:
@@ -23,7 +23,7 @@ before_script:
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
-  - R -e "install.packages('lattice');"
+#  - R -e "install.packages('lattice');"
   - echo "run R code here"
 after_success:
   - echo "Sending the files to dist branch..."
