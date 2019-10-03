@@ -24,13 +24,13 @@ script:
   - R -e "install.packages('mrgsolve');"
   - echo "run R code here"
 after_success:
-  - echo "Sending the files to dist branch..."
+  - echo "Sending the files to gh-pages branch..."
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
-  - git clone -b dist --single-branch https://github.com/insysbio/heta-case-mini tmp
+  - git clone -b gh-pages --single-branch https://github.com/insysbio/heta-case-mini tmp
   - cd tmp
   - cp -rf ../dist/* ./
   - cp -rf ../static/* ./
   - git add --all
   - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:dist; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:gh-pages; fi
