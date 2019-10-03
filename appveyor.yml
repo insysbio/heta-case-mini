@@ -8,7 +8,7 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
-  - npm install -g git+https://$env:GL_TOKEN@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - npm install -g git+https://gitlab+deploy-token-5:$($env:GL_TOKEN)@gitlab.insysbio.com/metelkin/qs3p-js.git
 
 # Post-install test scripts.
 test_script:
