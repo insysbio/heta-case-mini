@@ -25,7 +25,7 @@ script:
   - R -e "install.packages('mrgsolve');"
 #  - R -e "source('./R/run-mrgsolve.R');" # alternative solution
 #  - /home/travis/R-bin/bin/Rscript ./R/run-mrgsolve.R
-  - Rscript -e ./R/run-mrgsolve.R
+  - Rscript ./R/run-mrgsolve.R
 after_success:
   - echo "Sending the files to gh-pages branch..."
   - git config --global user.email "travis@travis-ci.org"
