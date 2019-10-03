@@ -18,7 +18,7 @@ before_install:
   - npm -v
   - node -v
 install:
-  - npm install -g git+https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - npm install -g https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
