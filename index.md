@@ -9,7 +9,7 @@ in master branch.
 
 ## Results of building
 - [DBSolve](./slv.slv)
-- [SBML V2L4](./sbml.xml)
+- **SBML V2L4** [file](./sbml.xml), [SbmlViewer](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml.xml)
 - [Simbiology/Matlab](./simbio.m)
 - [Mrgsolve](./mrg.cpp)
 - [JSON](./json.json)
