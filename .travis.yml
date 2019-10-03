@@ -1,7 +1,7 @@
 language: r
 r_packages:
   - lattice
-#  - mrgsolve
+#  - mrgsolve # cannot be installed in this way
 node_js: 
   - '10'
 cache:
@@ -9,7 +9,7 @@ cache:
   R: true
 os:
   - linux
-  - osx
+#  - osx # problems with npm install -g git+https://... in node 6
 branches:
   only:
     - master
@@ -18,11 +18,10 @@ before_install:
   - npm -v
   - node -v
 install:
-  - npm install -g https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
-#  - R -e "install.packages('lattice');"
   - echo "run R code here"
 after_success:
   - echo "Sending the files to dist branch..."
