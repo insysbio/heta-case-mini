@@ -2,8 +2,8 @@ language: r
 r_packages:
   - lattice
 #  - mrgsolve # cannot be installed in this way
-node_js: 
-  - '10'
+#node_js: # this part works only when language: node_js
+#  - '10'
 cache:
   npm: true
   R: true
@@ -17,12 +17,13 @@ branches:
 before_install:
   - npm -v
   - node -v
+  - Rscript --version
 install:
   - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
-  - echo "run R code here"
+  - Rscript.exe ./R/run-mrgsolve.R
 after_success:
   - echo "Sending the files to gh-pages branch..."
   - git config --global user.email "travis@travis-ci.org"

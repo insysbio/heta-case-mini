@@ -9,14 +9,15 @@ namespace one begin
 
   // math
   A .= 10;
-  B .= 0; //ddds
+  B .= 0;
   r1 := k1*A*comp1;
 end
 
-k1 @Const = 1e-3;
+k1 @Const = 1.2e-1;
 
-mrg @MrgsolveExport { model: one };
 sbml @SBMLExport { model: one };
+mrg @MrgsolveExport { model: one };
+
 slv @SLVExport { model: one};
 simbio @SimbioExport { model: one};
 json @JSONExport;
