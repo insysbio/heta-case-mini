@@ -23,6 +23,9 @@ install:
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
+  - R -e "source('./R/run-mrgsolve.R');"
+  - Rscript.exe --version
+  - which Rscript
   - Rscript.exe ./R/run-mrgsolve.R
 after_success:
   - echo "Sending the files to gh-pages branch..."
