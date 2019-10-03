@@ -14,12 +14,11 @@ branches:
   only:
     - master
     - dev
-install:
-  - npm install -g git+https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
-before_script:
+before_install:
   - npm -v
   - node -v
-  - R -e "message(R.Version().version.string)" 
+install:
+  - npm install -g git+https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
