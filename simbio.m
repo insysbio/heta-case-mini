@@ -22,7 +22,7 @@ one.species.A = addspecies(one.compartment.comp1, 'A', 'ConstantAmount', false, 
 one.species.B = addspecies(one.compartment.comp1, 'B', 'ConstantAmount', false, 'InitialAmount', 0, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
 
 % Parameters
-one.parameter.k1 = addparameter(one_model, 'k1', 'ConstantValue', true, 'Value', 0.001, 'Notes', '', 'Tag', '');
+one.parameter.k1 = addparameter(one_model, 'k1', 'ConstantValue', true, 'Value', 0.12, 'Notes', '', 'Tag', '');
 
 % Reactions
 one.reaction.r1 = addreaction(one_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', true, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');

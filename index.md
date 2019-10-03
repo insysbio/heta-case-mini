@@ -1,4 +1,6 @@
-# DevOps
+[Back to source repository](https://github.com/insysbio/heta-case-mini)
+
+## DevOps
 
 This is the example of DevOps for qsp platforms based on Heta and qs3p-js. 
 
@@ -16,5 +18,4 @@ in master branch.
 ## Results of simulations
 
 ### mrgsolve
-
-*figure expected*
+[![fig](./mrg.png)](./mrg.png)

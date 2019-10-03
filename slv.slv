@@ -751,7 +751,7 @@ F[2] = ( 2*r1 ) / comp1;
 
 
 //! Constants, count: 1
-k1 = 0.001; // @Const;
+k1 = 0.12; // @Const;
 
 //! Initialization at start, count: 4
 comp1 = 1; // @Compartment {units: ?}

@@ -13,7 +13,7 @@ $SET end=120, delta=0.1, hmax=0.01, hmin=0, rtol=1e-3, atol=1e-6
 
 $PARAM @annotated
 // @Const ''
-k1 : 0.001 : 
+k1 : 0.12 : 
 
 $CMT @annotated
 // @Species ''

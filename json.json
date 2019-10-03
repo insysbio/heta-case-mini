@@ -54,16 +54,16 @@
   {
     "class": "Const",
     "id": "k1",
-    "num": 0.001
-  },
-  {
-    "class": "MrgsolveExport",
-    "id": "mrg",
-    "model": "one"
+    "num": 0.12
   },
   {
     "class": "SBMLExport",
     "id": "sbml",
+    "model": "one"
+  },
+  {
+    "class": "MrgsolveExport",
+    "id": "mrg",
     "model": "one"
   },
   {
