@@ -23,9 +23,8 @@ install:
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
-#  - R -e "source('./R/run-mrgsolve.R');" # alternative solution
-#  - /home/travis/R-bin/bin/Rscript ./R/run-mrgsolve.R
   - Rscript ./R/run-mrgsolve.R
+#  - R -e "source('./R/run-mrgsolve.R');" # alternative solution
 after_success:
   - echo "Sending the files to gh-pages branch..."
   - git config --global user.email "travis@travis-ci.org"
