@@ -2,7 +2,8 @@ language: r
 #r_packages:
 #  - mrgsolve
 #  - lattice
-node_js: '10'
+node_js: 
+  - '10'
 cache:
   npm: true
   R: true
@@ -15,6 +16,10 @@ branches:
     - dev
 install:
   - npm install -g git+https://gitlab+deploy-token-3:${DEPLOY_GITLAB_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
+before_script:
+  - npm -v
+  - node -v
+  - R -e "message(R.Version().version.string)" 
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
