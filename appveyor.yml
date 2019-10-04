@@ -3,14 +3,13 @@ environment:
   matrix:
     - nodejs_version: "10"
   GL_TOKEN:
-    secure: QWxv9Gtzk9j9id79KnGXOsYcfWqd1LCdGr6W6LTlwig=
+    secure: VNnB0hwyOF+1dgyyOmYHH/YqDJnpEOyILpjInBdL1lPxWqVfdsD7I5hMTPpbUtf/
 # Install scripts. (runs after repo cloning)
 install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
-  # install modules
-  - ps: npm install -g git+https://gitlab+deploy-token-5:$($env:GL_TOKEN)@gitlab.insysbio.com/metelkin/qs3p-js.git
-
+  # install modules, this code throws error because one of dependence
+  - ps: npm install -g git+https://$($env:GL_TOKEN)@gitlab.insysbio.com/metelkin/qs3p-js.git
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
