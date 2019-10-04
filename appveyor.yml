@@ -1,0 +1,22 @@
+# Test against the latest version of this Node.js version
+environment:
+  matrix:
+    - nodejs_version: "10"
+  GL_TOKEN:
+    secure: VNnB0hwyOF+1dgyyOmYHH/YqDJnpEOyILpjInBdL1lPxWqVfdsD7I5hMTPpbUtf/
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+  # install modules, this code throws error because of one of dependences
+  - ps: npm install -g git+https://$($env:GL_TOKEN)@gitlab.insysbio.com/metelkin/qs3p-js.git
+# Post-install test scripts.
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # run tests
+  - qs3p build
+
+# Don't actually build.
+build: off
