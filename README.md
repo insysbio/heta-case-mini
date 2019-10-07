@@ -22,22 +22,22 @@ The result of integration can be found on GitHub Pages <https://insysbio.github.
 
 ## Directory structure
 
-**/src** : Source files. Main folder for storing modeling and data files.
+`/src` : Source files. Main folder for storing modeling and data files.
 
-**/src/index.heta** : Platform conent in Heta syntax.
+`/src/index.heta` : Platform content in Heta syntax.
 
-**/platform.json** : main platform settings.
+`/platform.json` : main platform settings.
 
-**/R** : files to store .R code. Used for creating diagnostic plot.
+`/R` : files to store .R code. Used for creating diagnostic plot.
 
-**/static** : files required for creation github pages.
+`/static` : files required for creation github pages.
 
-**/.travis.yml** : settings for CI/CD in <https://travis-ci.org/>
+`/.travis.yml` : settings for CI/CD in <https://travis-ci.org/>
 
-**/appveyor.yml** : settings for CI/CD in <https://www.appveyor.com/>
+`/appveyor.yml` : settings for CI/CD in <https://www.appveyor.com/>
 
-There is a set of directories generated dynamically but not syncronized with repository: **dist**, **tmp**, **meta**.
+There is a set of directories generated dynamically but not syncronized with repository: `dist`, `tmp`, `meta`.
 
 ## Known issues
 
- - Appveyor cannot finish sussesfuly because of warnings in one of qs3p-js dependencies. 
+ - Appveyor cannot finish successfully because of warnings in one of qs3p-js dependencies. 

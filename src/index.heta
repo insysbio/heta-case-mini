@@ -7,9 +7,10 @@ namespace one begin
   B @Species { compartment: comp1 };
   r1 @Reaction { actors: A => 2B };
 
-  // math
+  // init
   A .= 10;
   B .= 0;
+  // rhs
   r1 := k1*A*comp1;
 end
 
