@@ -1,5 +1,7 @@
 [![Travis](https://travis-ci.org/insysbio/heta-case-mini.svg?branch=master)](https://travis-ci.org/insysbio/heta-case-mini)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/insysbio/heta-case-mini?branch=master&svg=true)](https://ci.appveyor.com/project/metelkin/heta-case-mini)
+[![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/heta-case-mini/)
+[![gh-pages](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml.xml)
 
 # heta-case-mini
 
@@ -18,7 +20,7 @@ The result of integration can be found on GitHub Pages <https://insysbio.github.
  - platform bulding: generation of export files
  - mrgsolve installation
  - running R scripts to generate plots
- - sending files to gh-pages
+ - sending files to gh-pages (only for **master** branch and **linux**)
 
 ## Directory structure
 
