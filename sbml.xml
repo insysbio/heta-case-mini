@@ -61,7 +61,7 @@
       <reaction
         id="r1"
         
-        reversible="true"
+        reversible="false"
         fast="false"
         metaid="one::r1"
         >

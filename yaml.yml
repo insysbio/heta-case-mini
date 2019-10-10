@@ -17,6 +17,8 @@
   compartment: comp1
 - class: Reaction
   id: r1
+  aux:
+    reversible: false
   space: one
   assignments:
     ode_: {expr: k1 * A * comp1}

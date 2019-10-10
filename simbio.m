@@ -25,7 +25,7 @@ one.species.B = addspecies(one.compartment.comp1, 'B', 'ConstantAmount', false, 
 one.parameter.k1 = addparameter(one_model, 'k1', 'ConstantValue', true, 'Value', 0.12, 'Notes', '', 'Tag', '');
 
 % Reactions
-one.reaction.r1 = addreaction(one_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', true, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');
+one.reaction.r1 = addreaction(one_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', false, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');
   addreactant(one.reaction.r1, [one.species.A, ], [1, ]);
   addproduct(one.reaction.r1, [one.species.B, ], [2, ]);
 
