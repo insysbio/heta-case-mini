@@ -2,10 +2,11 @@
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/insysbio/heta-case-mini?branch=master&svg=true)](https://ci.appveyor.com/project/metelkin/heta-case-mini)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/heta-case-mini/)
 [![gh-pages](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml.xml)
+[![GitHub license](https://img.shields.io/github/license/insysbio/heta-case-mini.svg)](https://github.com/insysbio/heta-case-mini/blob/master/LICENSE)
 
 # heta-case-mini
 
-This is part of [heta-lang](https://insysbio.github.io/heta-lang/) project.
+*This is part of [heta-lang](https://insysbio.github.io/heta-lang/) project.*
 
 This repository is a demo example of QSP platfrom developed with Heta and qs3p-js.
 
@@ -15,7 +16,7 @@ The sepository includes the example of settings for CI/CD. See files `.travis.ym
 
 The result of integration can be found on GitHub Pages <https://insysbio.github.io/heta-case-mini/>
 
-### Short description of CI/CD steps for Travis
+### Short description of CI/CD steps for Travis: linux, osx, windows
  - qs3p-js installation
  - platform bulding: generation of export files
  - mrgsolve installation

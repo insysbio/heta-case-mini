@@ -7,17 +7,33 @@ matrix:
         - lattice
         #- mrgsolve # cannot be installed in this way
       before_install:
+        - npm -v
+        - node -v
         - Rscript --version
       script:
         - qs3p build
         - R -e "install.packages('mrgsolve');"
         - Rscript ./R/run-mrgsolve.R
         #- R -e "source('./R/run-mrgsolve.R');" # alternative solution
+      after_success:
+        - echo "Sending files to gh-pages branch..."
+        - git config --global user.email "travis@travis-ci.org"
+        - git config --global user.name "Travis CI"
+        - git clone -b gh-pages --single-branch https://github.com/insysbio/heta-case-mini tmp
+        - cd tmp
+        - cp -rf ../dist/* ./
+        - cp -rf ../static/* ./
+        - git add --all
+        - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
+        - if [[ "$TRAVIS_OS_NAME" == "linux" && "$TRAVIS_BRANCH" == "master" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:gh-pages; fi
     - 
       os: osx # problems with npm install -g git+https://...
       language: node_js
       node_js:
         - '10'
+      before_install:
+        - npm -v
+        - node -v
       script:
         - qs3p build
     - 
@@ -25,6 +41,9 @@ matrix:
       language: node_js
       node_js:
         - '10'
+      before_install:
+        - npm -v
+        - node -v
       script:
         - qs3p build
 
@@ -35,19 +54,5 @@ branches:
   only:
     - master
     - dev
-before_install:
-  - npm -v
-  - node -v
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
-after_success:
-  - echo "Sending files to gh-pages branch..."
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis CI"
-  - git clone -b gh-pages --single-branch https://github.com/insysbio/heta-case-mini tmp
-  - cd tmp
-  - cp -rf ../dist/* ./
-  - cp -rf ../static/* ./
-  - git add --all
-  - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
-  - if [[ "$TRAVIS_OS_NAME" == "linux" && "$TRAVIS_BRANCH" == "master" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:gh-pages; fi
+  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.3.1
