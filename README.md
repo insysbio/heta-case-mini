@@ -6,7 +6,7 @@
 
 # heta-case-mini
 
-*This is part of [heta-lang](https://insysbio.github.io/heta-lang/) project.*
+*This is part of [heta-lang](https://hetalang.github.io/) project.*
 
 This repository is a demo example of QSP platfrom developed with Heta and qs3p-js.
 
