@@ -1,25 +1,23 @@
 /*
   Minimal heta file
 */
-namespace one begin
-  comp1 @Compartment .= 1;
-  A @Species { compartment: comp1 };
-  B @Species { compartment: comp1 };
-  r1 @Reaction { actors: A => 2B };
+comp1 @Compartment .= 1;
+A @Species { compartment: comp1 };
+B @Species { compartment: comp1 };
+r1 @Reaction { actors: A => 2B };
 
-  // init
-  A .= 10;
-  B .= 0;
-  // rhs
-  r1 := k1*A*comp1;
-end
+// init
+A .= 10;
+B .= 0;
+// rhs
+r1 := k1*A*comp1;
 
 k1 @Const = 1.2e-1;
 
-sbml @SBMLExport { model: one };
-mrg @MrgsolveExport { model: one };
+sbml @SBMLExport;
+mrg @MrgsolveExport;
 
-slv @SLVExport { model: one};
-simbio @SimbioExport { model: one};
+slv @SLVExport;
+simbio @SimbioExport;
 json @JSONExport;
 yaml @YAMLExport;
