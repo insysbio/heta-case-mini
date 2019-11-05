@@ -1,17 +1,14 @@
 - class: Compartment
   id: comp1
-  space: one
   assignments:
     start_: {expr: '1'}
 - class: Species
   id: A
-  space: one
   assignments:
     start_: {expr: '10'}
   compartment: comp1
 - class: Species
   id: B
-  space: one
   assignments:
     start_: {expr: '0'}
   compartment: comp1
@@ -19,7 +16,6 @@
   id: r1
   aux:
     reversible: false
-  space: one
   assignments:
     ode_: {expr: k1 * A * comp1}
   actors:
@@ -30,16 +26,12 @@
   num: 0.12
 - class: SBMLExport
   id: sbml
-  model: one
 - class: MrgsolveExport
   id: mrg
-  model: one
 - class: SLVExport
   id: slv
-  model: one
 - class: SimbioExport
   id: simbio
-  model: one
 - class: JSONExport
   id: json
 - class: YAMLExport

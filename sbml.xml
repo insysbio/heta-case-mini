@@ -9,7 +9,7 @@
         constant="false"
         size="1"
         
-        metaid="one::comp1"
+        metaid="comp1"
         >
         
       </compartment>
@@ -25,7 +25,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="10"
         
-        metaid="one::A"
+        metaid="A"
         >
         
       </species>
@@ -38,7 +38,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0"
         
-        metaid="one::B"
+        metaid="B"
         >
         
       </species>
@@ -63,7 +63,7 @@
         
         reversible="false"
         fast="false"
-        metaid="one::r1"
+        metaid="r1"
         >
         
         <listOfReactants>
