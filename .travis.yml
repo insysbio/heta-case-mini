@@ -55,4 +55,4 @@ branches:
     - master
     - dev
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4.2

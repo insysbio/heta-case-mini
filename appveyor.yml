@@ -9,7 +9,7 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules, this code throws error because of one of dependences
-  - ps: npm install -g git+https://$($env:GL_TOKEN)@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - ps: npm install -g git+https://$($env:GL_TOKEN)@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4.2
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
