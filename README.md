@@ -10,7 +10,7 @@
 
 This repository is a demo example of QSP platfrom developed with Heta and qs3p-js.
 
-## Continious integration solutions
+## Continuous integration solutions
 
 The sepository includes the example of settings for CI/CD. See files `.travis.yml` for Travis and `appveyor.yml` for Appveyor.
 
