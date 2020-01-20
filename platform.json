@@ -1,11 +1,12 @@
 {
   "id": "mini",
+  "license": "MIT",
   "builderVersion": "^0.4",
   "options": {
     "logLevel": "info"
   },
   "importModule": {
     "type": "heta",
-    "filename": "src/index.heta"
+    "source": "src/index.heta"
   }
 }
