@@ -710,16 +710,16 @@ InteractionNetwork
 
 //! Initialization at ode, count: 1
 
-r1 = k1 * A * comp1; // @Reaction {units: ?}
+r1 = k1 * A * comp1; // @Reaction  {units: ?}
 
 //! Differential equations, count: 2
 
-//!! A  @Species {units: ?}
+//!! A  @Species  {units: ?}
 
 F[1] = ( -1*r1 ) / comp1;
 
 
-//!! B  @Species {units: ?}
+//!! B  @Species  {units: ?}
 
 F[2] = ( 2*r1 ) / comp1;
 
@@ -751,13 +751,15 @@ F[2] = ( 2*r1 ) / comp1;
 
 
 //! Constants, count: 1
-k1 = 0.12; // @Const;
+k1 = 0.12; // @Const  {units: ?};
 
 //! Initialization at start, count: 4
-comp1 = 1; // @Compartment {units: ?}
-A = 10; // @Species {units: ?}
-B = 0; // @Species {units: ?}
-default_compartment_ = 1; // @Compartment {units: UL}
+comp1 = 1; // @Compartment  {units: ?}
+A = 10; // @Species  {units: ?}
+B = 0; // @Species  {units: ?}
+default_compartment_ = 1; // @Compartment  {units: UL}
+
+
 
 #
 
