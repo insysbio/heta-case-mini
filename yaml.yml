@@ -36,3 +36,5 @@
   id: json
 - class: YAMLExport
   id: yaml
+- class: MatlabExport
+  id: matlab

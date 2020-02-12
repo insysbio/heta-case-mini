@@ -7,7 +7,6 @@
 %}
 
 sbioaddtolibrary(sbiounit('week', 'day', 7));
-sbioaddtolibrary(sbiounit('xxx', 'nanomole', 1));
 
 simbio_model = sbiomodel('simbio');
 

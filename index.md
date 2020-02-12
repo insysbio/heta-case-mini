@@ -14,6 +14,7 @@ in [master branch](https://github.com/insysbio/heta-case-mini).
 - Mrgsolve [.CPP file](./mrg.cpp)
 - JSON [.JSON file](./json.json)
 - YAML [.YML file](./yaml.yml)
+- Matlab [.targ.gz file](./matlab.tar.gz)
 
 ## Results of simulations
 
