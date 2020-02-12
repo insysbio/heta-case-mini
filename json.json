@@ -82,5 +82,9 @@
   {
     "class": "MatlabExport",
     "id": "matlab"
+  },
+  {
+    "class": "XLSXExport",
+    "id": "table"
   }
 ]

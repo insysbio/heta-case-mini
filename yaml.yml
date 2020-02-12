@@ -38,3 +38,5 @@
   id: yaml
 - class: MatlabExport
   id: matlab
+- class: XLSXExport
+  id: table

@@ -15,6 +15,7 @@ in [master branch](https://github.com/insysbio/heta-case-mini).
 - JSON [.JSON file](./json.json)
 - YAML [.YML file](./yaml.yml)
 - Matlab [.targ.gz arch](./matlab.tar.gz)
+- Excel [.XLSX file](./table.xlsx)
 
 ## Results of simulations
 
