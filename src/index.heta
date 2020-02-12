@@ -21,3 +21,4 @@ simbio @SimbioExport;
 json @JSONExport;
 yaml @YAMLExport;
 matlab @MatlabExport;
+table @XLSXExport;
