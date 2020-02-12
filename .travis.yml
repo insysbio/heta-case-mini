@@ -17,12 +17,13 @@ matrix:
         #- R -e "source('./R/run-mrgsolve.R');" # alternative solution
       after_success:
         - echo "Sending files to gh-pages branch..."
-        - git config --global user.email "travis@travis-ci.org"
-        - git config --global user.name "Travis CI"
+        - git config user.email "travis@travis-ci.org"
+        - git config user.name "Travis CI"
         - git clone -b gh-pages --single-branch https://github.com/insysbio/heta-case-mini tmp
         - cd tmp
         - cp -rf ../dist/* ./
         - cp -rf ../static/* ./
+        - tar -zcf ./dist/matlab.tar.gz -C ./dist/matlab .
         - git add --all
         - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
         - if [[ "$TRAVIS_OS_NAME" == "linux" && "$TRAVIS_BRANCH" == "master" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:gh-pages; fi
@@ -55,4 +56,4 @@ branches:
     - master
     - dev
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4.17
+  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4

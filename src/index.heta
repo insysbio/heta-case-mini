@@ -20,3 +20,4 @@ slv @SLVExport;
 simbio @SimbioExport;
 json @JSONExport;
 yaml @YAMLExport;
+matlab @MatlabExport;

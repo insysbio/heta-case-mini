@@ -1,7 +1,7 @@
 {
   "id": "mini",
   "license": "MIT",
-  "builderVersion": "^0.4.2",
+  "builderVersion": "^0.4.22",
   "options": {
     "logLevel": "info"
   },
