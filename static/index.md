@@ -10,11 +10,11 @@ in [master branch](https://github.com/insysbio/heta-case-mini).
 ## Results of building
 - DBSolveOptimum [.SLV file](./slv.slv)
 - **SBML V2L4** [.XML file](./sbml.xml), [ SbmlViewer](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml.xml)
-- Simbiology/Matlab [.M file](./simbio.m)
+- Simbiology/Matlab [.targ.gz arch](./simbio.tar.gz)
 - Mrgsolve [.CPP file](./mrg.cpp)
 - JSON [.JSON file](./json.json)
 - YAML [.YML file](./yaml.yml)
-- Matlab [.targ.gz file](./matlab.tar.gz)
+- Matlab [.targ.gz arch](./matlab.tar.gz)
 
 ## Results of simulations
 

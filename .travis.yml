@@ -24,6 +24,7 @@ matrix:
         - cp -rf ../dist/* ./
         - cp -rf ../static/* ./
         - tar -zcf matlab.tar.gz -C matlab .
+        - tar -zcf simbio.tar.gz -C simbio .
         - git add --all
         - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
         - if [[ "$TRAVIS_OS_NAME" == "linux" && "$TRAVIS_BRANCH" == "master" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/heta-case-mini HEAD:gh-pages; fi
