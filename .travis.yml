@@ -21,6 +21,7 @@ matrix:
         - git config user.name "Travis CI"
         - git clone -b gh-pages --single-branch https://github.com/insysbio/heta-case-mini tmp
         - cd tmp
+        - rm -r *
         - cp -rf ../dist/* ./
         - cp -rf ../static/* ./
         - tar -zcf matlab.tar.gz -C matlab .

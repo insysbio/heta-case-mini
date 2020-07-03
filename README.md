@@ -8,7 +8,7 @@
 
 *This is part of [heta-lang](https://hetalang.github.io/) project.*
 
-This repository is a demo example of QSP platfrom developed with Heta and qs3p-js.
+This repository is a demo example of QSP platfrom developed with Heta compiler.
 
 ## Continuous integration solutions
 
@@ -17,7 +17,7 @@ The sepository includes the example of settings for CI/CD. See files `.travis.ym
 The result of integration can be found on GitHub Pages <https://insysbio.github.io/heta-case-mini/>
 
 ### Short description of CI/CD steps for Travis: linux, osx, windows
- - qs3p-js installation
+ - [Heta compiler](https://hetalang.github.io/#/heta-compiler/) installation
  - platform bulding: generation of export files
  - mrgsolve installation
  - running R scripts to generate plots
@@ -43,4 +43,4 @@ There is a set of directories generated dynamically but not syncronized with rep
 
 ## Known issues
 
- - Appveyor cannot finish successfully because of warnings in one of qs3p-js dependencies. 
+ - Appveyor cannot finish successfully because of warnings in one of Heta compiler dependencies. 
