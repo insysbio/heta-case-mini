@@ -1,42 +1,26 @@
 - class: Compartment
   id: comp1
   assignments:
-    start_: {expr: '1'}
+    start_: '1'
 - class: Species
   id: A
   assignments:
-    start_: {expr: '10'}
+    start_: '10'
   compartment: comp1
 - class: Species
   id: B
   assignments:
-    start_: {expr: '0'}
+    start_: '0'
   compartment: comp1
 - class: Reaction
   id: r1
   aux:
     reversible: false
   assignments:
-    ode_: {expr: k1 * A * comp1}
+    ode_: k1 * A * comp1
   actors:
     - {target: A, stoichiometry: -1}
     - {target: B, stoichiometry: 2}
 - class: Const
   id: k1
   num: 0.12
-- class: SBMLExport
-  id: sbml
-- class: MrgsolveExport
-  id: mrg
-- class: SLVExport
-  id: slv
-- class: SimbioExport
-  id: simbio
-- class: JSONExport
-  id: json
-- class: YAMLExport
-  id: yaml
-- class: MatlabExport
-  id: matlab
-- class: XLSXExport
-  id: table

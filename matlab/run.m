@@ -4,19 +4,35 @@ p_names = ["k1"];
 output_names = ["comp1", "B", "A", "r1"];
 
 p = param();
-y0 = init(p);
-[ode_func, out_func] = model();
+[ode_func, out_func, y0, events] = model(p);
 
 %%% default task
-t_span = [0 100];
-opt = odeset('OutputFcn', out_func); % odeset('Mass',M,'RelTol',1e-4,'AbsTol',[1e-6 1e-10 1e-6], 'Stats','on');
+t_span = [0 100]; % [0:1:100]
+opt = odeset('OutputFcn', out_func, 'Events', events{1}, 'MaxStep', 3); % odeset('Mass',M,'RelTol',1e-4,'AbsTol',[1e-6 1e-10 1e-6], 'Stats','on');
+
 % the next string generates "output" variable
-[t, y] = ode15s(@(t, y) ode_func(t, y, p), t_span, y0, opt);
+%[tout, y, te, ye, ie] = ode15s(ode_func, t_span, y0, opt);
+
+% solution with events
+ti = t_span(1);
+yi = y0;
+tout = [];
+output = [];
+while ti < t_span(2)
+    [t, y, te, ye, ie] = ode15s(ode_func, [ti t_span(2)], yi, opt);
+
+    tout = vertcat(tout, t);
+    if length(te) == 0
+        break
+    end
+    ti = t(end);
+    yi = events{2}(ti, ye(end,:));
+end
 
 figure
 hold on
 for i = 1:length(output_names)
-    plot(t, output(:, i), '-', 'Linewidth', 1)
+    plot(tout, output(:, i), '-', 'Linewidth', 1)
 end
 title('Default plot','Fontsize', 14)
 xlabel('t', 'Fontsize', 14)

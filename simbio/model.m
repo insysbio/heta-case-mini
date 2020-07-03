@@ -1,32 +1,32 @@
 %{
-  This model was created by qs3p-js.
+  This model was created by Heta compiler.
   Additional functions and constants for compatibility see in "fun.m"
-  export from : simbio @SimbioExport {...};
+  export from :  @SimbioExport {...};
   
   
 %}
 
 sbioaddtolibrary(sbiounit('week', 'day', 7));
 
-simbio_model = sbiomodel('simbio');
+undefined_model = sbiomodel('');
 
 % Useful parameters
-addparameter(simbio_model, 'timeOne', 1, 'ValueUnits', 'hour');
+addparameter(undefined_model, 'timeOne', 1, 'ValueUnits', 'hour');
 
 % Compartments
-simbio.compartment.comp1 = addcompartment(simbio_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '');
+.compartment.comp1 = addcompartment(undefined_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '');
 
 % Species
-simbio.species.A = addspecies(simbio.compartment.comp1, 'A', 'ConstantAmount', false, 'InitialAmount', 10, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
-simbio.species.B = addspecies(simbio.compartment.comp1, 'B', 'ConstantAmount', false, 'InitialAmount', 0, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
+.species.A = addspecies(.compartment.comp1, 'A', 'ConstantAmount', false, 'InitialAmount', 10, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
+.species.B = addspecies(.compartment.comp1, 'B', 'ConstantAmount', false, 'InitialAmount', 0, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
 
 % Parameters
-simbio.parameter.k1 = addparameter(simbio_model, 'k1', 'ConstantValue', true, 'Value', 0.12, 'Notes', '', 'Tag', '');
+.parameter.k1 = addparameter(undefined_model, 'k1', 'ConstantValue', true, 'Value', 0.12, 'Notes', '', 'Tag', '');
 
 % Reactions
-simbio.reaction.r1 = addreaction(simbio_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', false, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');
-  addreactant(simbio.reaction.r1, [simbio.species.A, ], [1, ]);
-  addproduct(simbio.reaction.r1, [simbio.species.B, ], [2, ]);
+.reaction.r1 = addreaction(undefined_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', false, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');
+  addreactant(.reaction.r1, [.species.A, ], [1, ]);
+  addproduct(.reaction.r1, [.species.B, ], [2, ]);
 
 
 

@@ -1,8 +1,8 @@
 $PROB
-# Model: `mrg`
+# Model: ``
   - Title: 
   - Notes: 
-  - Source: Generated automatically from platform with qs3p-js 0.3.0
+  - Source: Generated automatically from platform with Heta compiler
 
 # Demo
 ```{r,echo=TRUE}
@@ -26,13 +26,13 @@ $GLOBAL
 #define B (B_amt_ / comp1)
 
 $PREAMBLE
-double comp1 = 1.0;
-//double A = 10.0;
 //double B = 0.0;
+//double A = 10.0;
+double comp1 = 1.0;
 
 $MAIN
-A_amt__0 = (10.0) * comp1;
 B_amt__0 = (0.0) * comp1;
+A_amt__0 = (10.0) * comp1;
 
 $ODE
 // @Reaction ''
