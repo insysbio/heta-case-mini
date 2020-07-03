@@ -14,11 +14,12 @@ r1 := k1*A*comp1;
 
 k1 @Const = 1.2e-1;
 
-sbml @SBMLExport;
-mrg @MrgsolveExport;
-slv @SLVExport;
-simbio @SimbioExport;
-json @JSONExport;
-yaml @YAMLExport;
-matlab @MatlabExport;
-table @XLSXExport;
+#export { filepath: sbml, format: SBML };
+#export { filepath: mrg, format:  Mrgsolve };
+#export { filepath: dbsolve, format:  DBSolve };
+#export { filepath: simbio, format:  Simbio };
+#export { filepath: json, format:  JSON };
+#export { filepath: yaml, format:  YAML };
+#export { filepath: json, format:  JSON };
+#export { filepath: matlab, format:  Matlab };
+#export { filepath: table, format:  XLSX };

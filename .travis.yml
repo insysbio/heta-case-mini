@@ -11,7 +11,7 @@ matrix:
         - node -v
         - Rscript --version
       script:
-        - qs3p build
+        - heta build
         - R -e "install.packages('mrgsolve');"
         - Rscript ./R/run-mrgsolve.R
         #- R -e "source('./R/run-mrgsolve.R');" # alternative solution
@@ -37,7 +37,7 @@ matrix:
         - npm -v
         - node -v
       script:
-        - qs3p build
+        - heta build
     - 
       os: windows
       language: node_js
@@ -47,7 +47,7 @@ matrix:
         - npm -v
         - node -v
       script:
-        - qs3p build
+        - heta build
 
 cache:
   npm: true
@@ -57,4 +57,4 @@ branches:
     - master
     - dev
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4
+  - npm install -g heta-compiler
