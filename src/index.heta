@@ -10,16 +10,16 @@ r1 @Reaction { actors: A => 2B };
 A .= 10;
 B .= 0;
 // rhs
-r1 := k1*A*comp1;
+r1 := k1 * A * comp1;
 
 k1 @Const = 1.2e-1;
 
 #export { filepath: sbml, format: SBML };
-#export { filepath: mrg, format:  Mrgsolve };
-#export { filepath: dbsolve, format:  DBSolve };
-#export { filepath: simbio, format:  Simbio };
-#export { filepath: json, format:  JSON };
-#export { filepath: yaml, format:  YAML };
-#export { filepath: json, format:  JSON };
-#export { filepath: matlab, format:  Matlab };
-#export { filepath: table, format:  XLSX };
+#export { filepath: mrg, format: Mrgsolve };
+#export { filepath: dbsolve, format: DBSolve };
+#export { filepath: simbio, format: Simbio };
+#export { filepath: json, format: JSON };
+#export { filepath: yaml, format: YAML };
+#export { filepath: json, format: JSON };
+#export { filepath: matlab, format: Matlab };
+#export { filepath: table, format: XLSX };
