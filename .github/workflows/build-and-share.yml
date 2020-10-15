@@ -1,7 +1,11 @@
 # This workflow build Heta platform and share results in "dist" branch
 
 name: Build and Share
-shell: bash
+
+defaults:
+  run:
+    shell: bash
+    
 on:
   push:
     branches: [ master, '*' ]
@@ -17,9 +21,7 @@ jobs:
         platform: [ ubuntu-latest, windows-latest, macos-latest ]
 
     runs-on: ${{ matrix.platform }}
-    defaults:
-      run:
-        shell: bash
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
