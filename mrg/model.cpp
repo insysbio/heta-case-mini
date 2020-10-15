@@ -1,8 +1,8 @@
 $PROB
-# Model: ``
-  - Title: 
-  - Notes: 
-  - Source: Generated automatically from platform with Heta compiler
+# Model: `nameless`
+  - Title: nameless
+  - Notes: Generated automatically from platform with Heta compiler
+  - Source: Heta compiler
 
 # Demo
 ```{r,echo=TRUE}

@@ -1,5 +1,3 @@
-
-
 DBSolve Optimum (new parser) 1 Jul 2006
 SLV25.00*
 Number of rows in matrix (Number of activities) #1
@@ -405,16 +403,22 @@ if(t==0){
 //! Calculation of ode_ part, count: 3
 B = B_ / comp1;
 A = A_ / comp1;
+//
+//!! r1
 r1 = k1 * A * comp1;
 
 }
 //! Differential equations, count: 2
+//
 //!! A @Species  {units: ?}
 F[1] = -1*r1;
+//
 //!! B @Species  {units: ?}
 F[2] = 2*r1;
 
-// calculate events
+
+
+
 #
 
 <RHS 2
@@ -440,6 +444,8 @@ F[2] = 2*r1;
 */
 
 //! Constants, count: 1
+//
+//!! ungroupped
 k1 = 0.12; // @Const  {units: ?};
 
 //! Auxilary variables

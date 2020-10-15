@@ -1,32 +1,33 @@
 %{
   This model was created by Heta compiler.
   Additional functions and constants for compatibility see in "fun.m"
-  export from :  @SimbioExport {...};
-  
-  
+  export from : #export { format: Simbio, namespace: nameless, ...};
 %}
 
 sbioaddtolibrary(sbiounit('week', 'day', 7));
 
-undefined_model = sbiomodel('');
+nameless_model = sbiomodel('nameless');
 
 % Useful parameters
-addparameter(undefined_model, 'timeOne', 1, 'ValueUnits', 'hour');
+addparameter(nameless_model, 'timeOne', 1, 'ValueUnits', 'hour');
 
 % Compartments
-.compartment.comp1 = addcompartment(undefined_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '');
+nameless.compartment.comp1 = addcompartment(nameless_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '');
 
 % Species
-.species.A = addspecies(.compartment.comp1, 'A', 'ConstantAmount', false, 'InitialAmount', 10, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
-.species.B = addspecies(.compartment.comp1, 'B', 'ConstantAmount', false, 'InitialAmount', 0, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
+nameless.species.A = addspecies(nameless.compartment.comp1, 'A', 'ConstantAmount', false, 'InitialAmount', 10, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
+nameless.species.B = addspecies(nameless.compartment.comp1, 'B', 'ConstantAmount', false, 'InitialAmount', 0, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
 
 % Parameters
-.parameter.k1 = addparameter(undefined_model, 'k1', 'ConstantValue', true, 'Value', 0.12, 'Notes', '', 'Tag', '');
+nameless.parameter.k1 = addparameter(nameless_model, 'k1', 'ConstantValue', true, 'Value', 0.12, 'Notes', '', 'Tag', '');
 
 % Reactions
-.reaction.r1 = addreaction(undefined_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', false, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');
-  addreactant(.reaction.r1, [.species.A, ], [1, ]);
-  addproduct(.reaction.r1, [.species.B, ], [2, ]);
+nameless.reaction.r1 = addreaction(nameless_model, 'null -> null', 'Name', 'r1', 'Active', true, 'Reversible', false, 'ReactionRate', 'k1 * A * comp1', 'Notes', '', 'Tag', '');
+  addreactant(nameless.reaction.r1, [nameless.species.A, ], [1, ]);
+  addproduct(nameless.reaction.r1, [nameless.species.B, ], [2, ]);
+
+
+
 
 
 
