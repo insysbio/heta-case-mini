@@ -1,12 +1,16 @@
 # This workflow build Heta platform and share results in "dist" branch
 
 name: Build and Share
-
+shell: bash
 on:
   push:
     branches: [ master, '*' ]
   pull_request:
     branches: [ master ]
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   build:
