@@ -14,7 +14,7 @@ This repository is a demo example of QSP platfrom developed with Heta compiler.
 
 ## Continuous integration solutions
 
-The sepository includes the example of settings for CI/CD. See files `.travis.yml` for Travis and `appveyor.yml` for Appveyor.
+The repository includes the example of settings for CI/CD. See files: `.github/workflows/build-and share.yml` for GH Actions,  `.travis.yml` for Travis, and `appveyor.yml` for Appveyor.
 
 The result of integration can be found on GitHub Pages <https://insysbio.github.io/heta-case-mini/>
 
@@ -41,7 +41,7 @@ The result of integration can be found on GitHub Pages <https://insysbio.github.
 
 `/appveyor.yml` : settings for CI/CD in <https://www.appveyor.com/>
 
-There is a set of directories generated dynamically but not syncronized with repository: `dist`, `tmp`, `meta`.
+There is a set of directories generated dynamically but not syncronized with master: `dist`, `tmp`, `meta`.
 
 ## Known issues
 

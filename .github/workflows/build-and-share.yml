@@ -8,12 +8,11 @@ on:
   pull_request:
     branches: [ master ]
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
+    defaults:
+      run:
+        shell: bash
     strategy:
       matrix:
         node-version: [ 8.x, 10.x ]
