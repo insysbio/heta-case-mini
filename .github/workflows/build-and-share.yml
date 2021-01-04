@@ -35,8 +35,9 @@ jobs:
         r-version: '3.6'
     - name: Run R code
       run: |
-        R -e 'print("hello");'
-        R -e "install.packages('lattice', 'mrgsolve');"
+        Rscript -e 'print("hello");'
+        Rscript -e "install.packages(c('lattice', 'mrgsolve'));
+        Rscript ./R/run-mrgsolve.R
     - name: Copy other files to dist
       run: |
         cp -f ./static/index.md ./dist/
