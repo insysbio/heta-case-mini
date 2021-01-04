@@ -1,5 +1,6 @@
 [![Heta project](https://img.shields.io/badge/%CD%B1-Heta_project-blue)](https://hetalang.github.io/)
-[![GH Actions](https://github.com/insysbio/heta-case-mini/workflows/Build%20and%20Share/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3A%22Build+and+Share%22)
+[![GH Build](https://github.com/insysbio/heta-case-mini/workflows/Build/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3ABuild)
+[![Build and Share](https://github.com/insysbio/heta-case-mini/workflows/Build%20and%20Share/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3A%22Build+and+Share%22)
 [![Travis](https://travis-ci.org/insysbio/heta-case-mini.svg?branch=master)](https://travis-ci.org/insysbio/heta-case-mini)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/insysbio/heta-case-mini?branch=master&svg=true)](https://ci.appveyor.com/project/metelkin/heta-case-mini)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/heta-case-mini/)
