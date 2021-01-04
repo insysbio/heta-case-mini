@@ -1,0 +1,40 @@
+# This workflow build Heta platform on different platforms
+
+name: Build
+
+defaults:
+  run:
+    shell: bash
+    
+on:
+  push:
+    branches: [ master, '*' ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [ 8.x, 10.x, 12.x ]
+        heta-version: [ latest ]
+        platform: [ ubuntu-latest, windows-latest, macos-latest ]
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: |
+        # npm i -g https://github.com/hetalang/heta-compiler.git
+        npm i -g heta-compiler@${{ matrix.heta-version }}
+    - name: Clean and build
+      run: |
+        rm -rf dist/*
+        heta build
