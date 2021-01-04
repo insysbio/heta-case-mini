@@ -1,8 +1,7 @@
 [![Heta project](https://img.shields.io/badge/%CD%B1-Heta_project-blue)](https://hetalang.github.io/)
 [![GH Build](https://github.com/insysbio/heta-case-mini/workflows/Build/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3ABuild)
 [![Build and Share](https://github.com/insysbio/heta-case-mini/workflows/Build%20and%20Share/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3A%22Build+and+Share%22)
-[![Travis](https://travis-ci.org/insysbio/heta-case-mini.svg?branch=master)](https://travis-ci.org/insysbio/heta-case-mini)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/insysbio/heta-case-mini?branch=master&svg=true)](https://ci.appveyor.com/project/metelkin/heta-case-mini)
+[![Travis](https://travis-ci.com/insysbio/heta-case-mini.svg?branch=master)](https://travis-ci.com/insysbio/heta-case-mini)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/heta-case-mini/)
 [![gh-pages](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml.xml)
 [![GitHub license](https://img.shields.io/github/license/insysbio/heta-case-mini.svg)](https://github.com/insysbio/heta-case-mini/blob/master/LICENSE)
@@ -15,11 +14,11 @@ This repository is a demo example of QSP platfrom developed with Heta compiler.
 
 ## Continuous integration solutions
 
-The repository includes the example of settings for CI/CD. See files: `.github/workflows/build-and share.yml` for GH Actions,  `.travis.yml` for Travis, and `appveyor.yml` for Appveyor.
+The repository includes the example of settings for CI/CD. See files: `.github/workflows/build-and-share.yml` for GH Actions,  `.travis.yml` for Travis (temporally disabled).
 
 The result of integration can be found on GitHub Pages <https://insysbio.github.io/heta-case-mini/>
 
-### Short description of CI/CD steps for Travis: linux, osx, windows
+### Short description of CI/CD steps for GH Actions: linux, osx, windows
  - [Heta compiler](https://hetalang.github.io/#/heta-compiler/) installation
  - platform bulding: generation of export files
  - mrgsolve installation
@@ -34,16 +33,12 @@ The result of integration can be found on GitHub Pages <https://insysbio.github.
 
 `/platform.json` : main platform settings.
 
-`/R` : files to store .R code. Used for creating diagnostic plot.
+`/R` : files to store .R code for creating diagnostic plot.
 
 `/static` : files required for creation github pages.
 
 `/.travis.yml` : settings for CI/CD in <https://travis-ci.org/>
 
-`/appveyor.yml` : settings for CI/CD in <https://www.appveyor.com/>
+`/appveyor.yml` : settings for CI/CD in <https://www.appveyor.com/> (currently not used)
 
-There is a set of directories generated dynamically but not syncronized with master: `dist`, `tmp`, `meta`.
-
-## Known issues
-
- - Appveyor cannot finish successfully because of warnings in one of Heta compiler dependencies. 
+There is a set of directories generated dynamically but not syncronized with master: `dist`, `meta`.

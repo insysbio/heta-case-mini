@@ -35,7 +35,6 @@ jobs:
         r-version: '3.6'
     - name: Run R code
       run: |
-        Rscript -e 'print("hello");'
         Rscript -e 'install.packages(c("lattice", "mrgsolve"));'
         Rscript ./R/run-mrgsolve.R
     - name: Copy other files to dist
@@ -43,10 +42,7 @@ jobs:
         cp -f ./static/index.md ./dist/
         tar -zcf ./dist/matlab.tar.gz -C ./dist/matlab .
         tar -zcf ./dist/simbio.tar.gz -C ./dist/simbio .
-        mkdir -p ./dist/plots
-#        cp -rf ./diagnostics/dbsolve/*.png ./dist/plots/
-#        cp -rf ./diagnostics/simbio/*.png ./dist/plots/
-#        cp -rf ./diagnostics/matlab/*.png ./dist/plots/
+        # mkdir -p ./dist/plots
     - name: Deploy to "dist" branch only for "master" and "share" pushes
       if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/share' ) }}
       uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -54,4 +50,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: dist # The folder the action should deploy.
-        CLEAN: false
+        CLEAN: true
