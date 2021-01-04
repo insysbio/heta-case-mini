@@ -29,6 +29,14 @@ jobs:
       run: |
         npm i -g heta-compiler@latest
         heta build
+    - name: Set up R 3.6
+      uses: r-lib/actions/setup-r@v1
+      with:
+        r-version: '3.6'
+    - name: Run R code
+      run: |
+        R -e 'print("hello");'
+        R -e "install.packages('lattice', 'mrgsolve');"
     - name: Copy other files to dist
       run: |
         cp -f ./static/index.md ./dist/
