@@ -14,7 +14,7 @@ This repository is a demo example of QSP platfrom developed with Heta compiler.
 
 ## Continuous integration solutions
 
-The repository includes the example of settings for CI/CD. See files: `.github/workflows/build-and-share.yml` for GH Actions,  `.travis.yml` for Travis (temporally disabled).
+The repository includes the example of settings for CI/CD. See files: `.github/workflows/build.yml`, `.github/workflows/build-and-share.yml` for GH Actions,  `.travis.yml` for Travis (temporally disabled).
 
 The result of integration can be found on GitHub Pages <https://insysbio.github.io/heta-case-mini/>
 
@@ -22,7 +22,7 @@ The result of integration can be found on GitHub Pages <https://insysbio.github.
  - [Heta compiler](https://hetalang.github.io/#/heta-compiler/) installation
  - platform bulding: generation of export files
  - mrgsolve installation
- - running R scripts to generate plots
+ - running R scripts to generate plots (only for **master** branch and **linux**)
  - sending files to gh-pages (only for **master** branch and **linux**)
 
 ## Directory structure
