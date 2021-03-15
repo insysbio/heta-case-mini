@@ -1,10 +1,10 @@
 /*
   Minimal heta file
 */
-comp1 @Compartment .= 1;
-A @Species { compartment: comp1 };
-B @Species { compartment: comp1 };
-r1 @Reaction { actors: A => 2B };
+comp1 @Compartment { output: true } .= 1;
+A @Species { compartment: comp1, output: true };
+B @Species { compartment: comp1, output: true };
+r1 @Reaction { actors: A => 2B, output: true };
 
 // init
 A .= 10;
