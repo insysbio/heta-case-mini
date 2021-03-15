@@ -43,7 +43,7 @@ Number of scan parameters
 ABsolute Fitting
 #1
 Variables for FileOutput
-#A  B  t   #####
+#comp1  A  B  r1  t   #####
 Variables for FileOutputOn
 # #####
 (Internal) Temporary Print Option

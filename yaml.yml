@@ -2,25 +2,28 @@
   id: comp1
   assignments:
     start_: '1'
+  output: true
 - class: Species
   id: A
   assignments:
     start_: '10'
+  output: true
   compartment: comp1
 - class: Species
   id: B
   assignments:
     start_: '0'
+  output: true
   compartment: comp1
 - class: Reaction
   id: r1
-  aux:
-    reversible: false
   assignments:
     ode_: k1 * A * comp1
+  output: true
   actors:
     - {target: A, stoichiometry: -1}
     - {target: B, stoichiometry: 2}
+  reversible: false
 - class: Const
   id: k1
   num: 0.12

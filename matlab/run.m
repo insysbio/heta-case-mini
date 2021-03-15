@@ -1,8 +1,11 @@
 clear; clc; close all;
 
+% full list of records which are able to be outputted, see show_names
+output_ids = ["comp1", "B", "A", "r1"];
+% full list of constants, not used
 p_names = ["k1"];
-output_names = ["comp1", "B", "A", "r1"];
 
+% initialization of constants and model
 p = param();
 [ode_func, out_func, y0, events_conditions, events_affects] = model(p);
 
@@ -30,16 +33,18 @@ while ti < t_span(2)
     yi = ev{1}(ti, ye(end,:));
 end
 
-%  plot all outputs from show_names
-show_names = ["comp1", "B", "A", "r1"];
-[idx, loc] = ismember(show_names, output_names);
+%  list of record to plot
+show_ids = ["comp1", "B", "A", "r1"];
+
+% plot records
 figure
 hold on
+[idx, loc] = ismember(show_ids, output_ids);
 for i = loc
     plot(tout, output(:, i), '-', 'Linewidth', 1)
 end
 title('Default plot','Fontsize', 14)
 xlabel('t', 'Fontsize', 14)
 ylabel('records', 'Fontsize', 14)
-legend(show_names)
+legend(show_ids)
 hold off
