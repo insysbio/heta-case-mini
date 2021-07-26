@@ -8,9 +8,6 @@ sbioaddtolibrary(sbiounit('week', 'day', 7));
 
 nameless_model = sbiomodel('nameless');
 
-% Useful parameters
-addparameter(nameless_model, 'timeOne', 1, 'ValueUnits', 'hour');
-
 % Compartments
 nameless.compartment.comp1 = addcompartment(nameless_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '');
 
@@ -35,4 +32,6 @@ nameless.reaction.r1 = addreaction(nameless_model, 'null -> null', 'Name', 'r1',
 
 
 
-
+% Update simulation config
+nameless.config = getconfigset(nameless_model)
+set(nameless.config.SolverOptions, 'AbsoluteToleranceScaling', false)

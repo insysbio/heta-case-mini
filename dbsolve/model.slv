@@ -390,6 +390,7 @@ InteractionNetwork
 
 //! Initialization at start_
 if(t==0){
+    // initialization of TimeScales
     // initialization of Records
     comp1 = 1;
     B = 0;

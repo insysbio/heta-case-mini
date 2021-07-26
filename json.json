@@ -1,5 +1,9 @@
 [
   {
+    "class": "TimeScale",
+    "id": "t"
+  },
+  {
     "class": "Compartment",
     "id": "comp1",
     "assignments": {
