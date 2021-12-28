@@ -38,7 +38,7 @@ jobs:
     - name: Julia install
       uses: julia-actions/setup-julia@v1
       with:
-        version: '1.6'
+        version: '1.7'
         arch: x86
     - name: HetaSimulator install
       run: |
