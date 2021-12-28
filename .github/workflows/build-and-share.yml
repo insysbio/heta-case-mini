@@ -39,10 +39,9 @@ jobs:
       uses: julia-actions/setup-julia@v1
       with:
         version: '1.7'
-        arch: x86
     - name: HetaSimulator install
       run: |
-        julia -e 'using Pkg; Pkg.add(path="https://github.com/hetalang/HetaSimulator.jl"); Pkg.add("Plots")'
+        julia -e 'using Pkg; Pkg.add("HetaSimulator"); Pkg.add("Plots")'
         pwd
         julia ./julia/run.jl
     - name: Copy other files to dist
