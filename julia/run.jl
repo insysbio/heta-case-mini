@@ -2,7 +2,7 @@ using HetaSimulator, Plots
 
 model = load_jlmodel("../dist/julia/model.jl")
 
-res = sim(model; tspan = (0,120))
+res = Scenario(model; tspan = (0,120)) |> sim
 
 plotd = plot(res; vars = [:A, :B])
 savefig(plotd, "julia-plot-1.png")
