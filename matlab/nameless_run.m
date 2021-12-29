@@ -2,12 +2,12 @@ clear; clc; close all;
 
 % full list of records which are able to be outputted, see show_names
 output_ids = ["comp1", "B", "A", "r1"];
-% full list of constants, not used
-p_names = ["k1"];
+% full list of constants (not used)
+p_names = ["k1", ];
 
 % initialization of constants and model
-p = param();
-[ode_func, out_func, y0, events_conditions, events_affects] = model(p);
+p = nameless_param();
+[ode_func, out_func, y0, events_conditions, events_affects] = nameless_model(p);
 
 %%% default task
 t_span = [0 100]; % [0:1:100]

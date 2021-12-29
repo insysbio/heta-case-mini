@@ -1,5 +1,4 @@
-- class: TimeScale
-  id: t
+- id: t
 - class: Compartment
   id: comp1
   assignments:
