@@ -1,4 +1,5 @@
 using HetaSimulator, Plots
+ENV["GKSwstype"] = "100"
 
 model = load_jlmodel("../dist/julia/model.jl")
 
