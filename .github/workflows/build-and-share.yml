@@ -28,7 +28,7 @@ jobs:
         npm i -g heta-compiler@latest
         heta build
     - name: Set up R 3.6
-      uses: r-lib/actions/setup-r@v1
+      uses: r-lib/actions/setup-r@v2
       with:
         r-version: '3.6'
     - name: Run R code
@@ -55,9 +55,9 @@ jobs:
         # mkdir -p ./dist/plots
     - name: Deploy to "dist" branch only for "master" and "share" pushes
       if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/share' ) }}
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: dist # The folder the action should deploy.
-        CLEAN: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages # The branch the action should deploy to.
+        folder: dist # The folder the action should deploy.
+        clean: true
