@@ -16,13 +16,13 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         persist-credentials: false
     - name: Use Node.js 10.x
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
-        node-version: 10.x
+        node-version: 14.x
     - name: Install and build
       run: |
         npm i -g heta-compiler@latest
@@ -38,7 +38,7 @@ jobs:
     - name: Julia install
       uses: julia-actions/setup-julia@v1
       with:
-        version: '1.7'
+        version: '1.9'
     - name: HetaSimulator install
       run: |
         julia -e 'using Pkg; Pkg.add("HetaSimulator"); Pkg.add("Plots")'
