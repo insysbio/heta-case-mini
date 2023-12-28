@@ -14,10 +14,10 @@ in [master branch](https://github.com/insysbio/heta-case-mini).
 - **SBML V2L4** [.XML file](./sbml/nameless.xml), [ SbmlViewer](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml/nameless.xml)
 - Simbiology/Matlab [.targ.gz arch](./simbio.tar.gz)
 - Mrgsolve [.CPP file](./mrg/nameless.cpp)
-- JSON [.JSON file](./json.json)
-- YAML [.YML file](./yaml.yml)
+- JSON [.JSON file](./json/output.json)
+- YAML [.YML file](./yaml/output.yml)
 - Matlab [.targ.gz arch](./matlab.tar.gz)
-- Excel [.XLSX file](./table.xlsx)
+- Excel [.XLSX file](./table/output.xlsx)
 
 ## HetaSimulator.jl
 
