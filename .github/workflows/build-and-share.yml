@@ -20,12 +20,12 @@ jobs:
       with:
         persist-credentials: false
     - name: Use Node.js 18.x
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 18.x
     - name: Install and build
       run: |
-        npm i -g heta-compiler@0.8.3
+        npm i -g heta-compiler@0.8.1
         heta build
     - name: Set up R 3.6
       uses: r-lib/actions/setup-r@v2
@@ -36,7 +36,7 @@ jobs:
         Rscript -e 'install.packages(c("lattice", "mrgsolve"));'
         Rscript ./R/run-mrgsolve.R
     - name: Julia install
-      uses: julia-actions/setup-julia@v1
+      uses: julia-actions/setup-julia@v2
       with:
         version: '1.10'
     - name: HetaSimulator install
