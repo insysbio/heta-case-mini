@@ -1,5 +1,5 @@
 ### settings
-model_path <- './dist/mrg/nameless.cpp'
+model_path <- './dist/mrgsolve/nameless.cpp'
 fig_path <- './dist/mrg.png'
 library(mrgsolve)
 
