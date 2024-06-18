@@ -1,7 +1,6 @@
 [![Heta project](https://img.shields.io/badge/%CD%B1-Heta_project-blue)](https://hetalang.github.io/)
 [![GH Build](https://github.com/insysbio/heta-case-mini/workflows/Build/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3ABuild)
 [![Build and Share](https://github.com/insysbio/heta-case-mini/workflows/Build%20and%20Share/badge.svg)](https://github.com/insysbio/heta-case-mini/actions?query=workflow%3A%22Build+and+Share%22)
-[![Travis](https://travis-ci.com/insysbio/heta-case-mini.svg?branch=master)](https://travis-ci.com/insysbio/heta-case-mini)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/heta-case-mini/)
 [![gh-pages](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/heta-case-mini/sbml.xml)
 [![GitHub license](https://img.shields.io/github/license/insysbio/heta-case-mini.svg)](https://github.com/insysbio/heta-case-mini/blob/master/LICENSE)
@@ -14,7 +13,7 @@ This repository is a demo example of QSP platfrom developed with Heta compiler.
 
 ## Continuous integration solutions
 
-The repository includes the example of settings for CI/CD. See files: `.github/workflows/build.yml`, `.github/workflows/build-and-share.yml` for GH Actions,  `.travis.yml` for Travis (temporally disabled).
+The repository includes the example of settings for CI/CD. See files: `.github/workflows/build.yml`, `.github/workflows/build-and-share.yml` for GH Actions,  `.travis.yml` for Travis, `appveyor.yml` for Appveyor.
 
 The result of integration can be found on GitHub Pages <https://insysbio.github.io/heta-case-mini/>
 
@@ -37,7 +36,7 @@ The result of integration can be found on GitHub Pages <https://insysbio.github.
 
 `/static` : files required for creation github pages.
 
-`/.travis.yml` : settings for CI/CD in <https://travis-ci.org/>
+`/.travis.yml` : settings for CI/CD in <https://travis-ci.org/> (currently not used)
 
 `/appveyor.yml` : settings for CI/CD in <https://www.appveyor.com/> (currently not used)
 
