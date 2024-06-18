@@ -13,6 +13,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: 
+      image: insysbio/hetasimulator:latest
 
     steps:
     - name: Checkout
@@ -35,13 +37,13 @@ jobs:
       run: |
         Rscript -e 'install.packages(c("lattice", "mrgsolve"));'
         Rscript ./R/run-mrgsolve.R
-    - name: Julia install
-      uses: julia-actions/setup-julia@v2
-      with:
-        version: '1.10'
-    - name: HetaSimulator install
+#    - name: Julia install
+#      uses: julia-actions/setup-julia@v2
+#      with:
+#        version: '1.10'
+    - name: HetaSimulator run
       run: |
-        julia -e 'using Pkg; Pkg.add("HetaSimulator"); Pkg.add("Plots")'
+#       julia -e 'using Pkg; Pkg.add("HetaSimulator"); Pkg.add("Plots")'
         pwd
         julia ./julia/run.jl
     - name: Copy other files to dist
