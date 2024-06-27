@@ -31,7 +31,7 @@ jobs:
     - name: HetaSimulator run
       run: |
         pwd
-        julia --sysimage=~/.julia/sysimages/hetasimulator.so ./julia/run.jl
+        julia --sysimage=/home/runner/.julia/sysimages/hetasimulator.so ./julia/run.jl
     - name: Copy other files to dist
       run: |
         cp -f ./static/index.md ./dist/
