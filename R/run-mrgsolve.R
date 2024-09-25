@@ -2,6 +2,7 @@
 model_path <- './dist/mrgsolve/nameless.cpp'
 fig_path <- './dist/mrg.png'
 library(mrgsolve)
+library(lattice)
 
 ### main code
 message('Reading model... ', appendLF = FALSE)
@@ -22,9 +23,10 @@ message('OK')
 
 message('Plot results and save to file ${fig_path}... ', appendLF = FALSE)
 plot <- sim %>%
-    plot(A + B + r1 + comp1 ~ time, type='l')
+  plot(A + B + r1 + comp1 ~ time, type='l')
 
-  lattice::trellis.device(device = png, file =  fig_path )
-  print(plot)
-  dev.off()
+lattice::trellis.device(device = png, file =  fig_path)
+print(plot)
+dev.off()
+
 message('OK')

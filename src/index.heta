@@ -13,15 +13,3 @@ B .= 0;
 r1 := k1 * A * comp1;
 
 k1 @Const = 1.2e-1;
-
-#export { format: SBML };
-#export { format: Mrgsolve };
-#export { format: DBSolve };
-#export { format: Simbio };
-#export { format: JSON };
-#export { format: YAML };
-#export { format: JSON };
-#export { format: Matlab };
-#export { format: XLSX };
-#export { format: Julia };
-#export { format: Summary };

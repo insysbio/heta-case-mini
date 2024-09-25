@@ -1,0 +1,25 @@
+{
+  "id": "mini",
+  "license": "MIT",
+  "builderVersion": "^0.9.0",
+  "options": {
+    "logLevel": "info"
+  },
+  "importModule": {
+    "type": "heta",
+    "source": "src/index.heta"
+  },
+  "export": [
+    { "format": "SBML" },
+    { "format": "Mrgsolve" },
+    { "format": "DBSolve" },
+    { "format": "Simbio" },
+    { "format": "JSON" },
+    { "format": "YAML" },
+    { "format": "JSON" },
+    { "format": "Matlab" },
+    { "format": "XLSX" },
+    { "format": "Julia" },
+    { "format": "Summary" }
+  ]
+}

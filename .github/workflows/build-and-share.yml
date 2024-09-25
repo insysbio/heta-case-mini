@@ -23,7 +23,7 @@ jobs:
         persist-credentials: false
     - name: Install and build
       run: |
-        npm i -g heta-compiler@0.8.4
+        npm i -g heta-compiler
         heta build
     - name: Run R code
       run: |
