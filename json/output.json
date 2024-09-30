@@ -3,16 +3,16 @@
     "id": "t"
   },
   {
-    "class": "Compartment",
     "id": "comp1",
+    "class": "Compartment",
     "assignments": {
       "start_": "1"
     },
     "output": true
   },
   {
-    "class": "Species",
     "id": "A",
+    "class": "Species",
     "assignments": {
       "start_": "10"
     },
@@ -20,8 +20,8 @@
     "compartment": "comp1"
   },
   {
-    "class": "Species",
     "id": "B",
+    "class": "Species",
     "assignments": {
       "start_": "0"
     },
@@ -29,8 +29,8 @@
     "compartment": "comp1"
   },
   {
-    "class": "Reaction",
     "id": "r1",
+    "class": "Reaction",
     "assignments": {
       "ode_": "k1 * A * comp1"
     },
@@ -48,8 +48,8 @@
     "reversible": false
   },
   {
-    "class": "Const",
     "id": "k1",
+    "class": "Const",
     "num": 0.12
   }
 ]

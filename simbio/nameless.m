@@ -1,7 +1,8 @@
+
 %{
   This model was created by Heta compiler.
   Additional functions see in the directory
-  export from : #export { format: Simbio, namespace: nameless, ...};
+  export from : { format: Simbio, namespace: nameless, ...};
 %}
 
 %sbioaddtolibrary(sbiounit('week', 'day', 7));
@@ -9,7 +10,7 @@
 nameless_model = sbiomodel('nameless');
 
 % Compartments
-nameless_ns.compartment.comp1 = addcompartment(nameless_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '');
+nameless_ns.compartment.comp1 = addcompartment(nameless_model, 'comp1', 'ConstantCapacity', false, 'Capacity', 1, 'Notes', '', 'Tag', '', 'UserData', struct());
 
 % Species
 nameless_ns.species.A = addspecies(nameless_ns.compartment.comp1, 'A', 'ConstantAmount', false, 'InitialAmount', 10, 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
