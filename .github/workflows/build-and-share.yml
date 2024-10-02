@@ -24,6 +24,7 @@ jobs:
     - name: Install and build
       run: |
         npm i -g heta-compiler
+        heta --version
         heta build
     - name: Run R code
       run: |
@@ -31,6 +32,7 @@ jobs:
     - name: HetaSimulator run
       run: |
         pwd
+        julia --sysimage=/opt/julia/sysimages/hetasimulator.so -e 'using Pkg; println(Pkg.status("HetaSimulator"))' 
         julia --sysimage=/opt/julia/sysimages/hetasimulator.so ./julia/run.jl
     - name: Copy other files to dist
       run: |
